@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<meta charset="utf-8">
+ 	<title>G1</title>
+</head>
+
+<body>
+<form>
+	<fieldset>
+		<legend class="titlu_formular">Fisa de caracterizare a clientului<!-- COD G1 --></legend>
+	<ol>					
+		<li><fieldset> 
+			<legend class="subtitlu_formular">Informatii generale <!-- COD G1 FILA 1/8--></legend>
+			<fieldset> <!-- doar grupeza datele, fara legend -->
+				<label for="nume_client" id="G1_1_001">Nume, prenume, denumire sau denumirea firmei: </label>
+					<input type="text" name="nume_client" value="">
+				<label for="forma_juridica" id="G1_1_002">Forma juridica: </label>
+					<input name="forma_juridica" list="list_organiz">
+					<!-- pentru lista de mai jos trebuie un array definit undeva si un cod-->
+						<datalist id="list_organiz">
+							<option value="SNC">
+							<option value="SCS">
+							<option value="SA">
+							<option value="SCA">
+							<option value="SRL">
+							<option value="SCM">
+							<option value="SCC">
+							<option value="SCV">
+							<option value="SCA">	
+							<option value="PFA">
+							<option value="II">
+							<option value="IF">
+							<option value="PF">
+							<option value="CM">
+							<option value="BNP">
+						</datalist>
+				<label for="locatie_gest" id="G1_1_003">In locatie de gestiune: </label>
+					<input type="radio" name="locatie_gest" value="yes">da </input>
+					<input type="radio" name="locatie_gest" value="no">nu </input>
+			</fieldset>	
+			
+			<fieldset id="G1_1_004"> 
+				<legend class="label">Sediul social</legend> 
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+					<label for="adresa_p" id="G1_1_004_1"></label>	
+						<textarea name="adresa_p" rows="5" cols="10">Adresa sediului social: </textarea>
+					<label for="telefon_p" id="G1_1_004_2">Telefon: </label>	
+						<input type="tel" name="telefon_p" placeholder="telefon fix/mobil">
+					<label for="fax_p" id="G1_1_004_3">Fax: </label>	
+						<input type="tel" name="fax_p" placeholder="telefon fix">
+			</fieldset>
+			
+			<fieldset id="G1_1_005">
+				<legend class="label">Sediul sau sediile secundare</legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+					<label for="adresa_s1" id="G1_1_005_01"></label>	
+						<textarea name="adresa_s1" rows="10" cols="10">Adresa sediu secundar/punct lucru: </textarea>
+					<label for="caen_s1" id="G1_1_005_02">Cod CAEN: </label>
+						<input type="text" name="caen_s1">
+					<label for="telefon_s1" id="G1_1_005_03">Telefon: </label>
+						<input type="tel" name="telefon_s1" placeholder="telefon fix/mobil">
+					<label for="fax_s1" id="G1_1_005_04">Fax: </label>
+						<input type="tel" name="fax_s1" placeholder="telefon fix">
+				<!-- aici trebuie cod pentru toate sediile secundare/puncte de lucru-cate exista -->
+			</fieldset>
+			
+			<fieldset> <!-- doar grupeza datele, fara legend -->
+				<label for="caen_p" id="G1_1_006">Cod CAEN:</label>
+						<input type="text" name="caen_p">
+				<label for="CUI" id="G1_1_007">Nr. din Registrul Comertului: </label>
+					<input type="text" name="CUI">
+				<label for="CIF" id="G1_1_008">Cod Fiscal: </label>
+					<input type="text" name="CIF">
+				<label for="CIF_LB" id="G1_1_009">Nr. inregistrare fiscala pentru liberi profesionisti: </label>
+					<input type="text" name="CIF_LB">
+			</fieldset>
+
+			<fieldset> <!-- doar grupeza datele, fara legend -->
+				<label for="pers_resp" id="G1_1_009"><strong>INTERLOCUTORI </strong>(responsabili cu care suntem in legatura): </label>
+					<textarea name="pers_resp" rows="5" cols="10"></textarea>
+				<label for="pers_cons_ext" id="G1_1_010"><strong>ALTI CONSILIERI EXTERIORI:</strong></label>
+					<textarea name="pers_cons_ext" rows="5" cols="10"></textarea>
+			</fieldset>
+			
+			<fieldset id="G1_1_011">
+				<legend class="label"><strong>MISIUNEA: </strong></legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+					<label for="misiune_natura" id="G1_1_011_01">Natura misiunii: </label>
+						<input type="text" name="misiune_natura">
+					<label for="misiune_grupa" id="G1_1_011_02">Grupa: </label>
+						<input type="text" name="misiune_grupa">
+					<label for="misiune_colab" id="G1_1_011_03">Colaborator: </label>
+						<input type="text" name="misiune_colab">
+					<!-- nu reusesc sa-mi dau seama ce este natura/grupa/colab misiunii -->
+			</fieldset>
+		</fieldset> <!-- end of Informatii generale COD G1_1 FILA 1/8-->
+		</li>
+		<li>
+		<fieldset>
+			<legend class="subtitlu_formular">Informatiifiscale <!-- COD G1_2 FILA 2/8--></legend>
+			
+			<fieldset id="G1_2_001">
+				<legend class="label"><strong>IMPOZITE DIRECTE: </strong></legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+					<label for="impoz_dir" id="G1_2_001_01">Impozit pe profit </label>
+						<input type="radio" name="impoz_dir" value="imp_prof">
+					<label for="impoz_dir" id="G1_2_001_02">Impozit pe venitul global -IVG </label>
+						<input type="radio" name="impoz_dir" value="imp_vglb">
+					<label for="impoz_dir" id="G1_2_001_03">Impozit forfetar </label>
+						<input type="radio" name="impoz_dir" value="imp_forf"> 
+			</fieldset>	
+			
+			<fieldset> 
+				<legend class="label"><strong>TAXE SI IMPOZITE LOCALE: </strong></legend>
+				<label for="impoz_loc" id="G1_2_002"></label>
+						<input type="text" name="impoz_loc">
+			</fieldset>		
+			
+			<fieldset id="G1_2_003">
+				<legend class="label"><strong>IMPOZITE INDIRECTE: </strong></legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+					<label for="impoz_tva" id="G1_2_003_01">TVA-cote: </label>
+						<input type="text" name="impoz_tva"> 
+					<label for="impoz_acc" id="G1_2_003_02">Accize-cote: </label>
+						<input type="text" name="impoz_acc"> 
+			</fieldset>	
+			
+			<fieldset id="G1_2_004">
+				<legend class="label"><strong>INTREPRINZATOR INDIVIDUAL sau LIBER-PROFESIONIST: </strong></legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+				<label for="av_nat" id="G1_2_004_01"><strong>AVANTAJE IN NATURA(1)</strong></label>
+					<input type="text" name="av_nat">
+				<label for="met_eval" id="G1_2_004_02">(1)Adaugati daca este necesar o foaie cu explicarea modalitatilor de evaluare: </label>
+					<textarea name="met_eval" rows="5" cols="10"></textarea>
+			</fieldset>		
+			<h5>(sume totale anuale)</h5>	
+				
+			<table id="G1_2_005">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Exercitiul<input type="text" value="aici vreau anul curent-4"></th>
+						<th>Exercitiul<input type="text" value="aici vreau anul curent-3"></th>
+						<th>Exercitiul<input type="text" value="aici vreau anul curent-2"></th>
+						<th>Exercitiul<input type="text" value="aici vreau anul curent-1"></th>
+						<th>Exercitiul<input type="text" value="aici vreau anul curent"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Chirie locuinta: </th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<th>Utilizare privata a unui vehicul: </th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<th>Gratuitati la bunuri si servicii: </th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					<tr>
+						<th>Reduceri de preturi sau tarife la cumpararea de bunuri, prestarea de servicii: </th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+						<tr>
+						<th><input type="text"></td></th>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+						<td><input type="text"></td>
+					</tr>
+					
+				</tbody>
+			</table>	
+			<fieldset id="G1_2_006">
+				<legend class="label">Regim matrimonial:</legend>
+				<!-- ptr ca avem un fieldset ce reprezinta un label am ales clasa="label" ptr a avea aceeasi formatare cu label-->
+			
+				<label for="casat" id="G1_2_006_01"></label>
+						<input type="radio" name="casat" value="casat">Casatorit(a)</input>
+						<input type="radio" name="casat" value="necasat">Necasatorit(a)</input>	
+				</br>	
+				<label for="sot" id="G1_006_02">Statutul sotului/sotiei:</label>
+						<input type="radio" name="sot" value="casnic">casnica</input>
+						<input type="radio" name="sot" value="liber">liber-profesionist(a)</input>		
+						<input type="radio" name="sot" value="salar">salariat(a)</input>
+			</fieldset>	
+		</fieldset> <!-- end of Informatii fiscale COD G1_2 FILA 2/8-->
+	</li>
+		
+	<li><fieldset> 
+			<legend class="subtitlu_formular">Informatii sociale <!-- COD G1_3 FILA 3/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_3 FILA 3/8-->
+	</li>
+	
+	<li><fieldset> 
+			<legend class="subtitlu_formular">Informatii economice <!-- COD G1_4 FILA 3/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_4 FILA 3/8-->
+	</li>	
+	
+	<li><fieldset> 
+			<legend class="subtitlu_formular">Fisa descriptiva <!-- COD G1_5 FILA 4/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_5 FILA 4/8-->
+		
+		
+		<fieldset> 
+			<legend class="subtitlu_formular">Fisa descriptiva <!-- COD G1_5 FILA 5/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_5 FILA 5/8-->
+		
+		<fieldset> 
+			<legend class="subtitlu_formular">Fisa descriptiva <!-- COD G1_5 FILA 6/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_5 FILA 6/8-->
+		
+		<fieldset> 
+			<legend class="subtitlu_formular">Fisa descriptiva <!-- COD G1_5 FILA 7/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_5 FILA 7/8-->
+	</li>
+	<li>	
+		<fieldset> 
+			<legend class="subtitlu_formular">Datele cheie ale examinarii analitice <!-- COD G1_6 FILA 8/8--></legend>
+		</fieldset> <!-- end of Informatii fiscale COD G1_6 FILA 8/8-->
+	<fieldset> 
+	</li>
+</ol>
+</form>
+
+</body>
+</html>
